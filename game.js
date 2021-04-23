@@ -28,7 +28,7 @@ function computerPlay() {
         }
       }
 
-    let prePlayerSelection = prompt('What will you chose?', 'Rock? Paper? Scissors?');
+    let prePlayerSelection = prompt('What will you choose?', 'Rock? Paper? Scissors?');
     let playerSelection = prePlayerSelection.toLowerCase();
     console.log(playRound(playerSelection, computerSelection));
 
