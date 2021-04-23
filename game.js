@@ -20,16 +20,19 @@ function computerPlay() {
     function playRound(playerSelection, computerSelection) {
         if (playerSelection == computerSelection) {
             return 'It\'s a tie!'
-        } else if (playerSelection == 'rock' && computerSelection == 'scissors' || playerSelection == 'paper' && computerSelection == 'rock' || playerSelection == 'scissors' && computerSelection == 'paper') {
+        } else if (playerSelection == 'rock' && computerSelection == 'scissors' || playerSelection == 'paper' && +
+         computerSelection == 'rock' || playerSelection == 'scissors' && computerSelection == 'paper') {
             return 'You won!'
         } else {
             return 'You lose! :('
         }
       }
 
-    let prePlayerSelection = prompt('What will you chose?');
+    let prePlayerSelection = prompt('What will you chose?', 'Rock? Paper? Scissors?');
     let playerSelection = prePlayerSelection.toLowerCase();
     console.log(playRound(playerSelection, computerSelection));
+
+    
 //функция game() до 5 реузльтативных выборов (попытаться сделать цикл)
 
 function game() {
