@@ -1,7 +1,26 @@
-//первый играет компьютер, рандомный выбор фигуры
+const figures = {
+    ROCK: 'rock',
+    SCISSORS: 'scissors',
+    PAPER: 'paper'
+}
+
+function beatFigure (figure) {
+    switch (figure) {
+        case figures.ROCK:
+            return figures.SCISSORS;
+            break;
+        case figures.PAPER:
+            return figures.ROCK;
+            break;
+        case figures.SCISSORS:
+            return figures.PAPER;
+            break;
+    }
+}
+
 function computerPlay() {
-    const figures = ['Rock', 'Paper', 'Scissors'];
-    computerChoise = Math.floor(Math.random()*figures.length);
+    const randomFigures = [1, 2, 3]
+    computerChoise = Math.floor(Math.random()*randomFigures.length);
     if ( computerChoise == '0') {
         return 'rock';
     }
@@ -14,27 +33,17 @@ function computerPlay() {
 
 }
 
-    //преобразовать return предыдущей функции в computerSelection
     let computerSelection = computerPlay();
+    let prePlayerSelection = prompt('What will you choose?', 'Rock? Paper? Scissors?');
+    let playerSelection = prePlayerSelection.toLowerCase();
+    console.log(playRound(playerSelection, computerSelection));
 
     function playRound(playerSelection, computerSelection) {
         if (playerSelection == computerSelection) {
             return 'It\'s a tie!'
-        } else if (playerSelection == 'rock' && computerSelection == 'scissors' || playerSelection == 'paper' && +
-         computerSelection == 'rock' || playerSelection == 'scissors' && computerSelection == 'paper') {
+        } else if (beatFigure(playerSelection) == computerSelection) {
             return 'You won!'
         } else {
             return 'You lose! :('
         }
       }
-
-    let prePlayerSelection = prompt('What will you choose?', 'Rock? Paper? Scissors?');
-    let playerSelection = prePlayerSelection.toLowerCase();
-    console.log(playRound(playerSelection, computerSelection));
-
-    
-//функция game() до 5 реузльтативных выборов (попытаться сделать цикл)
-
-function game() {
-
-}
