@@ -21,7 +21,7 @@ function beatFigure (figure) {
 
 
     function game() {
-        
+
     let computerScore = 0;
     let playerScore = 0;
 
@@ -41,12 +41,13 @@ function beatFigure (figure) {
             }
         
         }
+
         let computerSelection = computerPlay();
 
-    let playerSelection = prompt('What will you choose?', 'Rock? Paper? Scissors?').toLowerCase();
-    console.log(playRound(playerSelection, computerSelection));
+         let playerSelection = prompt('What will you choose?', 'Rock? Paper? Scissors?').toLowerCase();
+            console.log(playRound(playerSelection, computerSelection));
 
-    function playRound(playerSelection, computerSelection) {
+        function playRound(playerSelection, computerSelection) {
         if (playerSelection == computerSelection) {
             return 'It\'s a tie!'
         } else if (beatFigure(playerSelection) == computerSelection) {
