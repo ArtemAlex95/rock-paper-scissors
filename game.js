@@ -19,9 +19,7 @@ function beatFigure (figure) {
 }
 
 
-
-    function game() {
-
+function game() {
     let computerScore = 0;
     let playerScore = 0;
 
@@ -61,7 +59,7 @@ function beatFigure (figure) {
         }
       }
     }
+ };
 
-        
-      
-};
+ const button = document.querySelector('button');
+       button.addEventListener('click', game);
