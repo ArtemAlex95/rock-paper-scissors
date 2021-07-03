@@ -42,8 +42,6 @@ function gameOver() {
       computerSelection = computerPlay();
       playRound(playerSelection, computerSelection);
       updateScore();
-      removeTie();
-
   }
 
   function updateScore () {
