@@ -2,9 +2,25 @@
 <head>
   <title>RPS</title>
   <meta charset="UTF-8"/>
+  <link href="css/reset.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="css/main.css" rel="stylesheet" type="text/css" media="all"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <button class="start">Start</button>
+  <div class='button-field'>
+    <button class='button' id='rock'>✊</button>
+    <button class='button' id='paper'>✋</button>
+    <button class='button' id='scissors'>✌</button>
+  </div>
+  <div>
+    <p id='tie-score' class='tie-score'>It's a tie!</p>
+  </div>
+  <div class='results'>
+    <p class='score-text'>Your score: <span class='player-score'></span></p>
+    <p class='score-text'>Computer score: <span class='computer-score'></span></p>
+  </div>  
   <script src = "game.js">
   </script>
 </body>
