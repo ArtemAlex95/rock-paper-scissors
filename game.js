@@ -42,6 +42,8 @@ function gameOver() {
       computerSelection = computerPlay();
       playRound(playerSelection, computerSelection);
       updateScore();
+      removeTie();
+
   }
 
   function updateScore () {
@@ -78,8 +80,4 @@ function gameOver() {
     else {
         return 'scissors';
     }
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 5babfcd769a412709a3b250b54f2e1e003bbafe1
