@@ -55,8 +55,6 @@ function gameOver() {
   function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         tieScore.style.visibility = 'visible';
-        console.log('Tie');
-        return;
     } else if (beatFigure(playerSelection) == computerSelection) {
         tieScore.style.visibility = 'hidden';
         playerScore = ++playerScore;
