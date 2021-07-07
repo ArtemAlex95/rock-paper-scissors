@@ -4,9 +4,9 @@ let playerSelection;
 let computerSelection;
 
 const figures = {
-    ROCK: 'rock',
-    SCISSORS: 'scissors',
-    PAPER: 'paper'
+    ROCK: '✊',
+    SCISSORS: '✌',
+    PAPER: '✋'
 }
 
 function beatFigure (figure) {
@@ -42,6 +42,7 @@ function gameOver() {
       computerSelection = computerPlay();
       playRound(playerSelection, computerSelection);
       updateScore();
+      updateChoices();
   }
 
   function updateScore () {
@@ -68,12 +69,30 @@ function gameOver() {
     const randomFigures = [1, 2, 3]
     computerChoise = Math.floor(Math.random()*randomFigures.length);
     if ( computerChoise == '0') {
-        return 'rock';
+        return '✊';
     }
     else if (computerChoise == '1') {
-        return 'paper';
+        return '✋';
     }
     else {
-        return 'scissors';
+        return '✌';
     }
+};
+
+function updateChoices() {
+    let containerForPlayer = document.getElementById('player-selection');
+    let containerForComputer = document.getElementById('computer-selection');
+
+    let forPlayer = document.createElement('div');
+    let forComputer = document.createElement('div');
+
+    forPlayer.className = 'player-selection';
+    forComputer.className = 'computer-selection';
+
+    forPlayer.textContent = `${playerSelection}`;
+    forComputer.textContent = `${computerSelection}`;
+
+    containerForPlayer.after(forPlayer);
+    containerForComputer.after(forComputer);
+
 };
