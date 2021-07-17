@@ -35,7 +35,7 @@ function gameOver() {
 
   function game(e) {
       if (gameOver()) { 
-          (playerScore === 5) ? alert('You win! Press F5 to play again') : alert('You lost :( Press F5 to play again');
+        (playerScore === 5) ? alert('You win! Press F5 to play again') : alert('You lost :( Press F5 to play again');
         button.disabled = 'disabled';
     }
       playerSelection = e.target.id;
