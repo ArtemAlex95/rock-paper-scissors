@@ -1,5 +1,5 @@
 # rock-paper-scissors
-very first attemt to make rsp game
+Very first attemt to make RPS game
 
 this is my very first project in js
 
